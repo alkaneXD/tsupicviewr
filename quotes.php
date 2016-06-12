@@ -1,5 +1,4 @@
 <?php
-
 	$a = "Ive missed more than 9000 shots in my career. Ive lost almost 300 games. 26 times, Ive been trusted to take the game winning shot and missed. Ive failed over and over and over again in my life. And that is why I succeed. --Michael Jordan";
 	$b = "If youre trying to achieve, there will be roadblocks. Ive had them; everybody has had them. But obstacles dont have to stop you. If you run into a wall, dont turn around and give up. Figure out how to climb it, go through it, or work around it";
 	$c = "Some people want it to happen, some wish it would happen, others make it happen.";
@@ -52,6 +51,7 @@
   $xx = "Motivation is what gets you started. Habit is what keeps you going.";
   $yy = "Successful people do what unsuccessful people are not willing to doDon't wish it were easier, wish you were better.";
   $zz = "To be successful you must accept all challenges that come your way. You can't just accept the ones you like.";
+  
   $random_array = array($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m, $n, $o, $p, $q, $r, $s, $t, $u, $v, $w, $x, $y, $z, $aa, $bb, $cc, $dd, $ee, $ff, $gg, $hh, $ii, $jj, $kk, $ll, $mm, $nn, $oo, $pp, $qq, $rr, $ss, $tt, $uu, $vv, $ww, $xx, $yy, $zz);
 	shuffle($random_array);
 	$random = '"'.$random_array[0].'"';
