@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TSU | StudNoPicView</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">TSU | PicViewr</h1>
+		<p class="text-center" style="color: red;">Just a side project.<br> Coded with love by "Alkane"</p>
+		<hr>
+		<div class="text-center">
+			<form class="text-center" id="tsupicviewr" style="padding-bottom: 30px;">
+				<div class="row">
+				  <div class="col-md-offset-4 col-md-4">
+				    <div class="input-group">
+				      <input type="text" class="form-control stud_no" placeholder="10 digit student number">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="submit">GO</button>
+				      </span>
+				    </div>
+				  </div>
+				</div>
+			</form>
+			<div class="jumbotron text-center student_picture hidden">
+				<p><img class="text-center img-responsive img-container" src="" style="display: block; margin: 0 auto;"></p>
+				<p><a class="btn btn-danger download_pic" href="" download=".png" target="_blank"><i class="glyphicon glyphicon-download-alt" style="font-size: 20px;"></i></a></p>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$('#tsupicviewr').submit(function(e){
+		e.preventDefault();
+		var student_no = $('.stud_no').val();
+		var tsu_api = 'https://student.tsu.edu.ph/picture.ashx?studentno=';
+		$('.img-container').load(function(){}).fadeIn('slow').attr('src',tsu_api+student_no);
+		$('div.student_picture').fadeIn('slow').removeClass('hidden');
+		$('a.download_pic').load(function(){}).attr('href',tsu_api+student_no);
+	});
+	</script>
+</body>
+</html>
