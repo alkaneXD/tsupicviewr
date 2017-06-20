@@ -37,7 +37,7 @@
 	$('#tsupicviewr').submit(function(e){
 		e.preventDefault();
 		var student_no = $('.stud_no').val();
-		var tsu_api = 'https://student.tsu.edu.ph/picture.ashx?studentno=';
+		var tsu_api = 'http://student.tsu.edu.ph/picture.ashx?studentno=';
 		$('.img-container').load(function(){}).fadeIn('slow').attr('src',tsu_api+student_no);
 		$('div.student_picture').fadeIn('slow').removeClass('hidden');
 		$('a.download_pic').load(function(){}).attr('href',tsu_api+student_no);
